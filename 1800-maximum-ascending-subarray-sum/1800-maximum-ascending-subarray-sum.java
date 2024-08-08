@@ -13,7 +13,7 @@ class Solution {
     public int maxAscendingSum(int[] nums) {
         ArrayList<Integer> arr = new ArrayList<>() ;
         for(int i = 0 ; i < nums.length ; i++){
-            for(int j = i + 2 ; j <= nums.length ; j++){
+            for(int j = i + 1 ; j <= nums.length ; j++){
                 arr.add(check(i , j , nums));
             }
         }
