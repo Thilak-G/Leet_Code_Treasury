@@ -7,7 +7,6 @@ class Solution {
             System.out.println(n);
             arr.add(n);
         }
-        System.out.println(arr);
         return arr.size();
     }
 }
