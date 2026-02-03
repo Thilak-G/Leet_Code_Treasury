@@ -7,15 +7,13 @@ class Solution {
 
             if(target < letters[mid]){
                 e = mid - 1 ;
-            }else if(target > letters[mid]){
-                s = mid + 1 ;
             }else{
-                s++;
+                s = mid + 1 ;
             }
         }
-        if(s == letters.length){
-            return letters[0];
-        }
-        return letters[s];
+        // if(s == letters.length){
+        //     return letters[0];
+        // }
+        return letters[s % letters.length];
     }
 }
