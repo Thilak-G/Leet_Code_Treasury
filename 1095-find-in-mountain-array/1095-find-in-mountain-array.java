@@ -12,17 +12,17 @@ class Solution {
         while(start < end){
             int mid = start + (end - start) / 2 ;
 
-            if(arr.get(mid) > arr.get(mid + 1)){
-                end = mid ;
-            }else{
+            if(arr.get(mid) <= arr.get(mid + 1)){
                 start = mid + 1 ;
+            }else{
+                end = mid ;
             }
         }
         return start ;
     }
     public int binarySearch(MountainArray arr , int target , int start , int end , boolean isAsc){
         while(start <= end){
-            int mid = (start + end) / 2 ;
+            int mid = start + (end - start) / 2 ;
             int midValue = arr.get(mid) ;
             if(midValue == target){
                 return mid ;
@@ -51,6 +51,6 @@ class Solution {
         if(firstTry != -1){
             return firstTry ;
         }
-        return binarySearch(mountainArr , target , peak + 1 , mountainArr.length() - 1 , false);
+        return binarySearch(mountainArr , target , peak + 1 , len , false);
     }
 }
