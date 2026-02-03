@@ -23,9 +23,6 @@ class Solution {
     public int binarySearch(MountainArray arr , int target , int start , int end , boolean isAsc){
         while(start <= end){
             int mid = (start + end) / 2 ;
-            // if(mid >= arr.length()){
-            //     return -1 ;
-            // }
             int midValue = arr.get(mid) ;
             if(midValue == target){
                 return mid ;
@@ -50,7 +47,6 @@ class Solution {
     public int findInMountainArray(int target, MountainArray mountainArr) {
         int len = mountainArr.length() - 1 ;
         int peak = findPeak(mountainArr , 0 , len) ;
-        System.out.println(peak);
         int firstTry = binarySearch(mountainArr , target , 0 , peak , true);
         if(firstTry != -1){
             return firstTry ;
