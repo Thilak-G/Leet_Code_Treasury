@@ -51,6 +51,6 @@ class Solution {
         if(firstTry != -1){
             return firstTry ;
         }
-        return binarySearch(mountainArr , target , peak + 1 , mountainArr.length() - 1 , false);
+        return binarySearch(mountainArr , target , peak + 1 , len , false);
     }
 }
